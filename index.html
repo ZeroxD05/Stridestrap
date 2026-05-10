@@ -1391,11 +1391,7 @@
   };
 
   window.addEngravingToCart = function() {
-    var l1 = document.getElementById('line1Input').value.toUpperCase() || 'STRIDE';
-    var strapImg = '';
-    var photoImg = document.getElementById('photoImg');
-    if (photoImg && photoImg.src) strapImg = photoImg.src;
-    buyNow('Gravur-Armband', 19.99, strapImg, l1);
+    window.open('https://buy.stripe.com/14A4gs3Dz3vkdiXatXfnO03', '_blank');
   };
 })();
 </script>
@@ -1460,7 +1456,6 @@
           <li><a href="#">Versand &amp; Lieferung</a></li>
           <li><a href="#">Rückgabe &amp; Umtausch</a></li>
           <li><a href="#personalisierung">Gravur-Service</a></li>
-          <li><a href="#">Größenguide</a></li>
           <li><a href="#">Kontakt</a></li>
         </ul>
       </div>
@@ -1601,7 +1596,7 @@ function showSuccess(order) {
   var div = document.createElement('div');
   div.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.85);background:white;border-radius:20px;padding:44px 40px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,0.18);z-index:500;transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),opacity 0.3s;opacity:0;max-width:360px;width:90%;';
   div.innerHTML = '<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#5A8A6A" stroke-width="1.5" style="margin-bottom:14px"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>'
-    + '<div style="font-family:\'Playfair Display\',serif;font-size:22px;font-weight:700;margin-bottom:8px">Bestellung erfolgreich!</div>'
+    + '<div style="font-family:Playfair Display,serif;font-size:22px;font-weight:700;margin-bottom:8px">Bestellung erfolgreich!</div>'
     + '<div style="font-size:14px;color:#8C8480;line-height:1.65;font-weight:300;">Vielen Dank für deine Bestellung' + (order && order.name ? ' von <strong>' + order.name + '</strong>' : '') + '.<br>Eine Bestätigung wurde an deine E-Mail-Adresse gesendet.</div>';
   document.body.appendChild(div);
   requestAnimationFrame(function() { div.style.transform = 'translate(-50%,-50%) scale(1)'; div.style.opacity = '1'; });
